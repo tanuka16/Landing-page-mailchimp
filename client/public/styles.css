@@ -1,0 +1,224 @@
+html, body {
+    /* overflow-y: hidden; */
+    height: 100%
+}
+
+.parent {
+  display: flex;
+  font-family: arial, sans-serif;
+  /* background-color: rgba(117, 255, 192, 0.6); */
+  /* rgba(red, green, blue, alpha) */
+  padding: 0% 10% .5% 5%;
+  background-color: rgba(0, 255, 0, 0.1);
+  /* background-color: hsla(169,100%,73%,0.3); */
+}
+
+.logo{
+  position: relative;
+  max-width: 250px;
+  float: left;
+  top: -10%;
+}
+.message{
+  display: flex;
+  background-color: #5C22FF;
+  color: rgb(127, 238, 186);
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  /* padding: 1% 1% 5% 5%; */
+  /* background */
+  border-radius: 5px;
+  position: absolute;
+  /* top: 25%; */
+}
+h1 p form .logo .message{
+  padding-left: 30%;
+  /* padding-right: 0; */
+}
+
+h1{
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  color: #5C22FF;
+  line-height: 65px;
+  text-align: left;
+  padding: 4% 0 3% 0
+}
+p{
+  line-height: 26px;
+  font-size: 20px;
+  font-style: normal;
+  font-family: "PT Serif";
+  color: #5C22FF;
+  text-align: left;
+  padding: 0% 1% 10% 0%
+  top: -59%;
+  /* background-color: white; */
+}
+
+/* form style */
+
+.subscribe{
+  width: 320px;
+  color: #5C22FF;
+  background: rgba(0,0,0,0);
+  top: -20%;
+}
+input{
+  width: 330px;
+  height: 45px;
+  bottom: 10%;
+  spacing: 18;
+  position: relative;
+  padding-right: 20%;
+  /* position: 0 488px; */
+  font-size: 20px;
+  font-family: "Montserrat";
+  border: .5px solid #5C22FF;
+  border-radius: 4px;
+  background-color: white;
+  text-decoration-color: #5C22FF;
+
+}
+
+button{
+  border-style: none;
+  border-radius: 4px;
+  left: 485px;
+  width: 190px;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  /* background: rgba(44,0,254,1); */
+  /* background: #5C22FF; */
+  background: red;
+  box-shadow: none;
+  text-shadow: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 19px;
+  font-weight: 700;
+  /* font-weight: bold; */
+  font-family: Arial;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-top: -50px;
+}
+
+
+/* Pattern styles */
+.half {
+  width: 100%;
+  padding: 3em;
+  padding-bottom: 17em;
+  color: #ffffff;
+  /* background: rgba(117, 255, 192, 0.6); */
+  /* background-opacity: .5; */
+  min-height: 500px;
+}
+
+/* =============================================================================================== */
+
+@media screen and (max-width: 600px){
+
+  html, body {
+      overflow-y: visible;
+      overflow-x: hidden;
+  }
+
+  .parent {
+    flex-direction: column;
+  }
+
+  .half {
+    width: auto;
+    min-height: 200px;
+  }
+
+  .right {
+    /* background: #aa0000; */
+    display: none;
+  }
+
+  .logo{
+    /* position: relative; */
+    max-width: 195px;
+    float: center;
+  }
+  h1{
+    line-height: 40px;
+    font-size: 40px;
+    padding-right: 0;
+    padding-top: 35px;
+  }
+  .message{
+    font-size: 15px;
+    text-align: center;
+    /* padding: 3px 5px 3px 5px; */
+  }
+
+  form{
+    padding-top: 20px;
+  }
+
+  input{
+    display: inline-block;
+    width: 190px;
+    height: 45px;
+    right: 30px;
+    spacing: 18;
+    font-size: 20px;
+  }
+
+  button{
+    width: 260px;
+    left: 25%;
+    float: center;
+    border: 10px;
+    bottom: -350px;
+  }
+
+  #paragraph{
+    padding-top: 80px;
+    /* text-align: center; */
+  }
+
+}
+
+
+@media screen and (max-width: 700px)and (orientation: portrait){
+  h1{
+    line-height: 70px;
+    font-size: 50px;
+  }
+  .sub-button {
+    position: relative;
+  }
+
+  button{
+    width: 258px !important;
+    left: 0%;
+    border: 10px;
+    bottom: -70px;
+    /* right: 30%; */
+  }
+  .message{
+    font-size: 15px;
+    text-align: center;
+    /* padding: 3px 5px 3px 5px; */
+  }
+
+}
+
+@media screen and (max-width: 1100px) and (orientation: portrait){
+  html, body {
+      overflow-y: visible;
+  }
+  h1{
+    padding-right: 0;
+  }
+
+
+}

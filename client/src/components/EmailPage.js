@@ -6,14 +6,20 @@ class EmailPage extends Component{
     email:""
   }
 
-  handleChange=(e)=>{
-    this.setState({email: e.target.value})
+  handleChange = (e)=>{
+    this.setState({email: e.target.value.trim()})
     // console.log(e.target.value);
   }
 
   subscribe=(e)=>{
     e.preventDefault();
 
+    if(this.state.email){
+      fetch(`api/memberAdd?email=${this.state.email}`)
+      .then(res => res.json())
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+    }
   }
 
 

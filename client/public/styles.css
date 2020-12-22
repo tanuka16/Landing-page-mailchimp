@@ -3,18 +3,35 @@ html, body {
     height: 100%
 }
 
-.parent {
+/*.parent {
   display: flex;
   font-family: arial, sans-serif;
   /* background-color: rgba(117, 255, 192, 0.6); */
   /* rgba(red, green, blue, alpha) */
-  padding: 0% 10% .5% 5%;
-  background-color: rgba(0, 255, 0, 0.1);
+  /* padding: 0% 10% .5% 5%; */
+  /* background-color: rgba(0, 255, 0, 0.1); */
   /* background-color: hsla(169,100%,73%,0.3); */
+/* setting up background grid */
+.parent{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px auto 50px auto 100px auto;
+  /* grid-template-rows: auto 50px 100px 100px auto  50px; */
+  grid-template-areas:
+  "empty"
+  'logo'
+  "title"
+  "instruction"
+  "emailSubscribe"
+  "privacy";
+  justify-items: left;
+  align-items: left;
+  color: #5C22FF;
 }
-
 .logo{
   position: relative;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.7);
   max-width: 250px;
   float: left;
   top: -10%;

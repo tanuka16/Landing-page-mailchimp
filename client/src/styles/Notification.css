@@ -1,0 +1,44 @@
+.notification {
+  border-radius: 4px;
+  display: grid;
+  grid-gap: 10px;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  grid-template-columns: 1fr 5fr;
+  border: 1px solid black;
+  position: relative;
+  transition: 0.35s;
+  transform: translateY(100%) !important;             /* hide notification when visibility is set to false. */
+}
+
+.notification.visible {
+  transform: translateY(0) !important;
+}
+
+.notification.success {
+  background-color: green;
+}
+
+.notification.error {
+  background-color: red;
+}
+.notification.warning {
+  background-color: orange;
+}
+
+.notification img {
+  justify-self: center;
+  align-self: center;
+  width: 40px;
+}
+
+.notification p {
+  color: black;
+  font-weight: 500;
+  align-self: center;
+  padding-right: 10px;
+}
+
+.notification:hover {
+  border-color: black;
+}

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import "../styles/EmailPage.css"
 
 class EmailPage extends Component{
   state = {
@@ -43,10 +43,10 @@ class EmailPage extends Component{
 
     return (
 
-      <form onSubmit={this.subscribe}>
+      <form className="email" onSubmit={this.subscribe}>
 
-        <div className="subscribe">
-          <input
+        {/*<div className="subscribe">*/}
+          <input className="email-input"
             id="u_email"
             type="email"
             placeholder="Enter your email here..."
@@ -54,14 +54,14 @@ class EmailPage extends Component{
             value={this.state.email}
             onChange={this.handleChange}
           />
-          <div className="sub-button">
+          {/*<div className="sub-button">*/}
 
-              <button type = 'submit'>
+              <button className="email-button" type = 'submit'>
                 <span>Win A Free Order</span>
               </button>
 
-          </div>
-        </div>
+        {/*  </div>
+        </div>*/}
       </form>
     )
   }

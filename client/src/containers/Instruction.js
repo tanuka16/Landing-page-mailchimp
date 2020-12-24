@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Notification from "./Notification";
+import Notification from '../components/Notification';
 
-import "../styles/Description.css";
+import "../styles/Instruction.css";
 
-const Description = ({ text, src, alt, message, visible, level }) => (
-  <div className="description">
-    <p className="description-text">{text}</p>
+const Instruction = ({ text, src, alt, message, visible, level }) => (
+  <div className="instruction">
+    <p className="instruction-text">{text}</p>
     <Notification
       src={src}
       alt={alt}
@@ -17,7 +17,7 @@ const Description = ({ text, src, alt, message, visible, level }) => (
   </div>
 );
 
-Description.propTypes = {
+Instruction.propTypes = {
   text: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
@@ -26,4 +26,4 @@ Description.propTypes = {
   level: PropTypes.string.isRequired
 };
 
-export default Description;
+export default Instruction;

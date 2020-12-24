@@ -26,3 +26,15 @@ body{
 *:after{
   box-sizing: border-box;
 }
+
+@media(max-width: 700px){
+  body{
+    text-align: center;
+  }
+}
+
+@media(max-width: 300px){
+  body{
+    text-align: center;
+  }
+}

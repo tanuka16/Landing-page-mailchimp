@@ -5,23 +5,24 @@
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   grid-template-columns: 1fr 5fr;
-  border: 1px solid black;
+  border: 1px solid;
   position: relative;
   transition: 0.35s;
-  transform: translateY(100%) !important;             /* hide notification when visibility is set to false. */
+  transform: translateY(100%);             /* hide notification when visibility is set to false. */
 }
 
 .notification.visible {
-  transform: translateY(0) !important;
+  transform: translateY(0);
 }
 
 .notification.success {
   background-color: green;
 }
 
-.notification.error {
+.notification.danger {
   background-color: red;
 }
+
 .notification.warning {
   background-color: orange;
 }
@@ -29,7 +30,7 @@
 .notification img {
   justify-self: center;
   align-self: center;
-  width: 40px;
+  width: 20px;
 }
 
 .notification p {
@@ -40,5 +41,5 @@
 }
 
 .notification:hover {
-  border-color: black;
+  border-color: #5C22FF;
 }

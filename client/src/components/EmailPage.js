@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
-
+import "../styles/EmailPage.css"
 
 class EmailPage extends Component{
-  state={
+  state = {
     email:""
   }
 
   handleChange = (e)=>{
     this.setState({email: e.target.value.trim()})
-    // console.log(e.target.value);
+    console.log(e.target.value);
   }
+
+
 
   subscribe=(e)=>{
     e.preventDefault();
@@ -17,17 +19,34 @@ class EmailPage extends Component{
     if(this.state.email){
       fetch(`api/memberAdd?email=${this.state.email}`)
       .then(res => res.json())
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
+      .then(json => {
+        if(json.status === "subscribed"){
+          this.props.configureNotification("success")
+        }else if (json.title === "Member Exists") {
+          this.props.configureNotification("warning")
+        }else {
+          this.props.configureNotification("danger")
+        }
+        this.props.showNotification()
+      })
+      .catch(err => {
+        console.log("error", err);
+      })
+
+      this.setState({ email: ""})
     }
+
   }
 
 
   render() {
+
     return (
-      <form onSubmit={this.subscribe}>
-        <div className="subscribe">
-          <input
+
+      <form className="email" onSubmit={this.subscribe}>
+
+        {/*<div className="subscribe">*/}
+          <input className="email-input"
             id="u_email"
             type="email"
             placeholder="Enter your email here..."
@@ -35,14 +54,14 @@ class EmailPage extends Component{
             value={this.state.email}
             onChange={this.handleChange}
           />
-          <div className="sub-button">
+          {/*<div className="sub-button">*/}
 
-              <button type = 'submit'>
+              <button className="email-button" type = 'submit'>
                 <span>Win A Free Order</span>
               </button>
 
-          </div>
-        </div>
+        {/*  </div>
+        </div>*/}
       </form>
     )
   }

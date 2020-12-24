@@ -22,12 +22,14 @@
   display: grid;
   grid-template-columns: 1fr;
   padding-top: 15px;
+  text-align: left;
 }
 .privacy-text{
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   font-size: 30px;
   font-weight: 500;
+  height: 20vmin;
 }
 
 .slogan-text{
@@ -35,11 +37,13 @@
   display: grid;
   color: rgb(127, 238, 186);
   font-weight: bold;
+
 }
 .slogan-text p{
-  font-size: 30px;
+  font-size: 20px;
   background-color: #5C22FF;
   border-radius: 4px;
+  padding: 0 5px 0 5px;
 }
 .message{
   /* font-size: 30px; */
@@ -53,10 +57,9 @@
   .parent{
     grid-template-columns: .5fr .5fr;
     justify-items: center;
-    overflow-x: hidden;
   }
-  .slogan-text p{
-    font-size: 20px;
+  /* .slogan-text p{
+    align-self: left;
 
-  }
+  } */
 }

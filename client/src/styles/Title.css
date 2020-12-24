@@ -8,16 +8,16 @@
   grid-template-rows: auto;
   grid-template-columns: auto  ;
   text-align: left;
-  line-height: 90px;
+  line-height: 70px;
   /* font-family: Oxygen; */
-  font-size: 60px;
+  font-size: 50px;
 }
 
 @media(max-width: 700px){
   .title{
-    text-align: center;
-    font-size: 50px;
-    line-height: 65px;
+    /* text-align: center; */
+    font-size: 40px;
+    line-height: 60px;
     /* max-width: 100%; */
   }
 }

@@ -13,6 +13,8 @@ const app = express();
 const mailchimp = new Mailchimp(mc_api_key);
 
 
+app.use(express.static(path.join(__dirname, '/client/build')));
+
 // setup the api import; API endpoint -> this's going to be called from the front-end to make this request for us
 //so we make the request to our server/API, it will then make the request for us to mailchimp & then back it back down the chain & they give us the data.
 // this's for security
